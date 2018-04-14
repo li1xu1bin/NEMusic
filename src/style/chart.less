@@ -1,0 +1,55 @@
+/*
+排行榜
+*/
+
+
+.list-content a {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    img {
+        width: 3.466667rem;
+        height: 3.466667rem;
+        margin-right:15px;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    .list-tracks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        p {
+            color: @black;
+            font-size: .426667rem;
+            margin: .3rem 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+.list-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+.list-global{
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        flex: 0 0 33%;
+        img {
+            width: 100%;
+            border-radius: 8px;
+            padding: 2px;
+            box-sizing:border-box;
+        }
+        p {
+            color: @black;
+            text-align: center;
+            font-size: .4rem;
+            margin-bottom: .2rem ;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+/*
+*搜索页
+*/
+
+ /*搜索框*/
+ .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    .search-part {
+        flex: 1;
+        margin: 0 15px;
+        input[name='search-words'] {
+            font-size: 18px;
+            color: @black;
+            outline: none;
+        }
+        input[name='search-words']::-webkit-input-placeholder {
+            color: @gray;
+        }
+    }
+}
+/* 搜索框输入关键词keyword后的下拉菜单 */
+.search-result {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+    z-index: 999;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 0 -15px;
+    ul{
+        margin: 15px 0;
+    }
+    li {
+        width: 100%;
+        line-height: 20px;
+        font-size: 18px;
+        padding: 10px 0;
+        color: @black;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+/* 搜索框未输入时 下方的推荐 */
+.search-tips {
+    h2 {
+        font-size: 12px;
+        margin: 10px 0;
+        color: @gray;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        font-size: 14px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 0 15px;
+        color: @black;
+        border: 1px solid #d3d4da;
+        border-radius: 30px;
+    }
+}
+/* 导航栏 */
+.result-page {
+    .nav {
+        display: flex;
+        a {
+            flex: 1;
+            text-align: center;
+            line-height: 35px;
+            font-size: 14px;
+            margin: 0 20px;
+        }
+        .isActive{
+            border-bottom: 2px solid @primary;
+            color: @primary;
+        }
+    }
+}
+
+
+/* 歌手、专辑、歌单页 */
+
+.search-list-same {
+    width: 100%;
+    .notFoundTips {
+        line-height: 200px;
+        text-align: center;
+        font-size: 14px;
+	}
+	li{
+		margin: 15px 0;
+	}
+    .list-item {
+		display: flex;
+		align-items: center;
+        white-space: nowrap;
+		
+        .artist-img {
+            width: 1.333333rem;
+            height: 1.333333rem;
+            border-radius: 8px;
+        }
+        .artist-name {
+			font-size: 18px;
+			margin-left:15px; 
+		}
+		.album-info{
+			overflow: hidden;
+			margin-left:15px; 
+		}
+        .album-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            color: @black;
+        }
+        .album-singer {
+            font-size: 14px;
+            color: @gray;
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+}

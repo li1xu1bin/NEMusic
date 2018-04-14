@@ -1,0 +1,55 @@
+/*
+*歌单列表
+*/
+
+
+.track-item {
+    display: flex;
+    align-items: center;
+    .track-num {
+        font-size: 16px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+	}
+	
+    .track-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        margin-right:30px;
+        overflow: hidden;
+        .track-title {
+            color: @black;
+            font-size: 17px;
+            line-height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: normal;
+        }
+        .track-detail {
+            color: @gray;
+            font-size: 12px;
+            line-height: 18px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: normal;
+		}
+
+	}
+	
+}
+
+.chartList {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}

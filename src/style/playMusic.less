@@ -1,0 +1,180 @@
+/*
+ *音乐播放样式
+*/
+
+.play-music {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: #fff;
+}
+
+.play-music-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .play-music-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        .icon {
+            margin-top: 5px;
+        }
+        .music-info {
+            width: 80%;
+            p {
+                text-align: center;
+                &:first-child {
+                    font-size: 24px;
+                    line-height: 26px;
+                    color: @black;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                &:last-child {
+                    font-size: 16px;
+                    margin-top: 8px;
+                    color: @gray;
+                }
+            }
+        }
+    }
+    .play-music-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .disk {
+            width: 6.2rem;
+            height: 6.2rem;
+            border-radius: 50%;
+            z-index: 20;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .disk2 {
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 50%;
+            position: absolute;
+            -webkit-filter: blur(40px);
+            filter: blur(40px);
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .lyric {
+            width: 80%;
+            height: 80%;
+            margin: 1rem auto;
+            overflow: hidden;
+            .lyricWrap {
+                width: 100%;
+                height: 100%;
+            }
+            #lyricBox {
+                transition: all 1s;
+                overflow: auto;
+            }
+            ul {
+                .lyricIndex {
+                    text-align: center;
+                    color: @black;
+                    font-size: 14px;
+                    line-height: 30px;
+                }
+                .on {
+                    color: @primary;
+                }
+            }
+        }
+    }
+    .play-music-operation {
+        .speed-operation {
+            margin: 10px 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            span {
+                font-size: 14px;
+                color: @gray;
+            }
+        } //播放按钮
+        .play-operation {
+            margin: 1rem auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+.play-music {
+    .range,
+    .volume {
+        width: 68%;
+        height: 0.8rem;
+        position: relative;
+        margin: 0 10px;
+        z-index: 3;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .volume {
+        height: 1.8rem;
+    }
+    .volume-icon {
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: -2.0rem;
+        background-size: 100% 100%;
+    }
+    .range:before,
+    .range-bar,
+    .range-progress,
+    .volume:before,
+    .volume-bar,
+    .volume-progress {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+    .range:before,
+    .volume:before {
+        content: '';
+        display: block;
+        background-color: #ccc;
+        width: 100%;
+    }
+    .range:before,
+    .range-progress,
+    .volume:before,
+    .volume-progress {
+        height: 0.1rem;
+        left: 0;
+    }
+    .range-bar,
+    .volume-bar {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 14px;
+        border-radius: 50%;
+        background-color: @primary;
+        border: 1px solid @white;
+        transition: all 1s;
+    }
+    .range-progress,
+    .volume-progress {
+        background-color: @primary;
+        transition: all 1s;
+    }
+}

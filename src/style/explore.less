@@ -1,0 +1,115 @@
+/*
+*推荐音乐
+*/
+
+//轮播图
+.carousel-figure {
+    overflow: hidden;
+    width: 100%;
+    height: 4.8rem;
+    border-radius: 8px;
+    .carousel-figure-pic{
+        margin: 0 -15px;
+    }
+    .pic-ul {
+        display: flex;
+        height: 4.8rem;
+        position: relative;
+        transition: all .4s;
+        .pic-list {
+            transition: all .4s;
+            .pic-item {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: 4.8rem;
+                border-radius: 8px;
+            }
+        }
+    }
+    .carousel-items {
+        position: absolute;
+        right: 0;
+        margin-top: -1rem;
+        margin-right: 1rem;
+        span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border: 1px solid @primary;
+            border-radius: 0.5rem;
+            margin: 10px 5px;
+            transition: all .5s;
+        }
+        .carousel-active {
+            background: #ffffff;
+        }
+    }
+}
+
+// 推荐歌单
+.recommend-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin:15px 0;
+}
+.recommend-playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .recommend-item{
+        width: 4.4rem;
+        .item-img{
+            position: relative;
+            display: block;
+            width: 4.4rem;
+            height: 4.4rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: 50% 50%;
+            .music-num {
+                position: absolute;
+                right: 2px;
+                top: 0;
+                z-index: 3;
+                padding-left: 15px;
+                color: #fff;
+                font-size: 12px;
+                font-style: normal;
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-size: 11px 10px;
+                text-shadow: 1px 0 0 rgba(0, 0, 0, .15);
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMiAyMCI+PGcgb3BhY2l0eT0iLjE1Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwNDAwMDAiIGQ9Im0yMiAxNi43NzdjMCAxLjIzMy0xLjEyMSAyLjIzMy0yLjUwNiAyLjIzMy0xLjM4NCAwLTIuNTA2LTEtMi41MDYtMi4yMzN2LTIuNTUzYzAtMS4yMzQgMS4xMjItMi4yMzMgMi41MDYtMi4yMzMuMTc0IDAgLjM0My4wMTcuNTA2LjA0NnYtMS4zN2gtLjAzM2MuMDE3LS4yMi4wMzMtLjQ0MS4wMzMtLjY2NiAwLTQuNDE4LTMuNTgyLTgtOC04LTQuNDE4IDAtOCAzLjU4Mi04IDggMCAuMjI1LjAxNi40NDYuMDM0LjY2NmgtLjAzNHYxLjM3Yy4xNjMtLjAyOS4zMzMtLjA0Ni41MDUtLjA0NiAxLjM4NCAwIDIuNTA2Ljk5OSAyLjUwNiAyLjIzM3YyLjU1M2MwIDEuMjMzLTEuMTIyIDIuMjMzLTIuNTA2IDIuMjMzcy0yLjUwNS0uOTk5LTIuNTA1LTIuMjMzdi0yLjU1M2MwLS4yNTguMDU5LS41MDEuMTQ4LS43My0uMDg1LS4xNDgtLjE0OC0uMzEtLjE0OC0uNDkzdi0yLjY2N2MwLS4wMjMuMDEyLS4wNDMuMDEzLS4wNjctLjAwNC0uMDg4LS4wMTMtLjE3Ni0uMDEzLS4yNjYgMC01LjUyMyA0LjQ3Ny0xMCAxMC0xMCA1LjUyMyAwIDEwIDQuNDc3IDEwIDEwIDAgLjA5LS4wMDkuMTc4LS4wMTQuMjY2LjAwMi4wMjQuMDE0LjA0NC4wMTQuMDY3djJjMCAuMzA2LS4xNDUuNTY5LS4zNi43NTMuMjI0LjMzNC4zNi43Mi4zNiAxLjEzOHYyLjU1MiIvPjwvZz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNmZmYiIGQ9Im0yMCAxNi43NzdjMCAxLjIzMy0xLjEyMSAyLjIzMy0yLjUwNiAyLjIzMy0xLjM4NCAwLTIuNTA2LTEtMi41MDYtMi4yMzN2LTIuNTUzYzAtMS4yMzQgMS4xMjItMi4yMzMgMi41MDYtMi4yMzMuMTc0IDAgLjM0My4wMTcuNTA2LjA0NnYtMS4zN2gtLjAzM2MuMDE3LS4yMi4wMzMtLjQ0MS4wMzMtLjY2NiAwLTQuNDE4LTMuNTgyLTgtOC04LTQuNDE4IDAtOCAzLjU4Mi04IDggMCAuMjI1LjAxNi40NDYuMDM0LjY2NmgtLjAzNHYxLjM3Yy4xNjMtLjAyOS4zMzMtLjA0Ni41MDUtLjA0NiAxLjM4NCAwIDIuNTA2Ljk5OSAyLjUwNiAyLjIzM3YyLjU1M2MwIDEuMjMzLTEuMTIyIDIuMjMzLTIuNTA2IDIuMjMzcy0yLjUwNS0uOTk5LTIuNTA1LTIuMjMzdi0yLjU1M2MwLS4yNTguMDU5LS41MDEuMTQ4LS43My0uMDg1LS4xNDgtLjE0OC0uMzEtLjE0OC0uNDkzdi0yLjY2N2MwLS4wMjMuMDEyLS4wNDMuMDEzLS4wNjctLjAwNC0uMDg4LS4wMTMtLjE3Ni0uMDEzLS4yNjYgMC01LjUyMyA0LjQ3Ny0xMCAxMC0xMCA1LjUyMyAwIDEwIDQuNDc3IDEwIDEwIDAgLjA5LS4wMDkuMTc4LS4wMTQuMjY2LjAwMi4wMjQuMDE0LjA0NC4wMTQuMDY3djJjMCAuMzA2LS4xNDUuNTY5LS4zNi43NTMuMjI0LjMzNC4zNi43Mi4zNiAxLjEzOHYyLjU1MiIvPjwvc3ZnPg==);
+            }
+        }
+        .item-des{
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            margin: 5px 0 15px;
+            // 多行文本
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            /* autoprefixer: off */
+            -webkit-box-orient: vertical; 
+            /* autoprefixer: on */
+            -webkit-line-clamp: 2;
+        }
+        &.recommend-item-private{
+            .item-img{
+                height: 2.933333rem;
+            }
+        } 
+        &.recommend-item-full{
+            width: 9.2rem;
+            .item-img{
+                width: 9.2rem;
+                height: 4rem;
+            }
+        } 
+    }
+}

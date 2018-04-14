@@ -1,0 +1,39 @@
+/*
+公用样式
+*/
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    h1 {
+        flex: 1;
+        color: @black;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+.content-view {
+    width: 100%;
+    padding:4px 15px 100px;
+    transition: all .5s cubic-bezier(.55, 0, .1, 1);
+}
+
+/*往左滑*/
+
+.slideToRight-enter,
+.slideToLeft-leave-active {
+    /* opacity: 0; */
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+}
+
+/*往右滑*/
+
+.slideToRight-leave-active,
+.slideToLeft-enter {
+    /* opacity: 0; */
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+}
