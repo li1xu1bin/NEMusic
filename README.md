@@ -1,5 +1,4 @@
-# 介绍：
-Vue全家桶实现的iOS 11风格的网易云音乐
+# Vue全家桶实现的iOS 11风格的网易云音乐：
 
 # 技术栈：
 Vue2 + Vuex + Vue-router + Axios + ES6 + Less
@@ -18,9 +17,12 @@ npm run build
  - 搜索
 
  # 部分截图：
- ![1](1.png)
- ![2](2.png)
- ![3](3.png)
+ ![1](1.png)  
+
+ ![2](2.png)  
+
+ ![3](3.png)  
+ 
  ![4](4.png)
 
 
