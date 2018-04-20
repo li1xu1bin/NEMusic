@@ -37,3 +37,72 @@
     -webkit-transform: translate(100%, 0);
     transform: translate(100%, 0);
 }
+
+// 底部栏
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 49px;
+    background: #fff;
+    a {
+        flex: 1;
+    }
+    .playingImg {
+        display: block;
+        width: 68px;
+        height: 68px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background-size: 100% 100%;
+        margin-top: -34px;
+        &.None{
+            background: url(../../assets/wave.svg);
+        }
+    }
+    .explore,
+    .chart {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        div {
+            width: 20px;
+            height: 20px;
+            margin: 8px 0;
+        }
+        &.isActive {
+            color: #ff4545;
+        }
+    }
+    .explore {
+        div {
+            background-image: url(../../assets/explore.svg);
+            background-repeat:no-repeat; 
+            background-position: center;
+        }
+        &.isActive {
+            div {
+                background-image: url(../../assets/exploreActive.svg);
+            }
+        }
+    }
+    .chart {
+        div {
+            background-image: url(../../assets/chart.svg);
+            background-repeat:no-repeat; 
+            background-position: center;
+        }
+        &.isActive {
+            div {
+                background-image: url(../../assets/chartActive.svg);
+            }
+        }
+    }
+}

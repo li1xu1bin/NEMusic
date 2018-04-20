@@ -1,7 +1,7 @@
 <template>
 	<div class="footer">
 		<router-link :to="{name:'explore',query:{key:1.1}}" class="explore" :class="{'isActive':musicNavIsActive==1}" exact>
-			<i></i>
+			<div></div>
 			<span>推荐音乐</span>
 		</router-link>
 		<router-link :to="{name:'playMusic',params:{id:currentMusic},query:{currentindex:currentindex}}">
@@ -11,7 +11,7 @@
 			</div>
 		</router-link>
 		<router-link :to="{name:'chart',query:{key:1.2}}" class="chart" :class="{'isActive':musicNavIsActive==2}" exact>
-			<i></i>
+			<div></div>
 			<span>排行榜</span>
 		</router-link>
 		<audio id="audio" :src="musicUrl" type="audio/ogg" @timeupdate="timeupDate()" @ended='playEnd()'>
@@ -136,70 +136,3 @@
 		}
 	}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less" scoped>
-	.footer {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		z-index: 100;
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		height: 49px;
-		background: #fff;
-		a {
-			flex: 1;
-		}
-		.playingImg {
-			display: block;
-			width: 68px;
-			height: 68px;
-			margin: 0 auto;
-			border-radius: 50%;
-			border: 2px solid #fff;
-			background-size: 100% 100%;
-			margin-top: -34px;
-			&.None{
-				background: url(../../../src/assets/wave.svg);
-			}
-		}
-		.explore,
-		.chart {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			i {
-				display: block;
-				width: 20px;
-				height: 20px;
-				margin: 8px 0;
-			}
-			&.isActive {
-				color: #ff4545;
-			}
-		}
-		.explore {
-			i {
-				background: url(../../../src/assets/explore.svg);
-			}
-			&.isActive {
-				i {
-					background: url(../../../src/assets/exploreActive.svg);
-				}
-			}
-		}
-		.chart {
-			i {
-				background: url(../../../src/assets/chart.svg);
-			}
-			&.isActive {
-				i {
-					background: url(../../../src/assets/chartActive.svg);
-				}
-			}
-		}
-	}
-</style>
