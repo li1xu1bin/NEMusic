@@ -42,5 +42,4 @@ export default {
 <style lang="less">
 // 全局样式
 @import "style/style.less";
-
 </style>
